@@ -1,15 +1,22 @@
 package com.abstractart.app;
 
-public class Art {
+public abstract class Art {
 	private String title;
 	private String author;
 	private String description;
 	
-// methods
-	public void viewArt() {
-		System.out.println(getDescription());
+// constructors
+	public Art(String title, String author, String description) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.description = description;
 	}
 	
+	
+// methods
+	abstract void viewArt();
+
 // getters and setters
 	public String getTitle() {
 		return title;
